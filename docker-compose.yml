@@ -11,7 +11,7 @@ services:
     volumes:
       - pgData:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - 5433:5432
     deploy:
       replicas: 1
     networks:
@@ -55,12 +55,14 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-      args:
-        - VITE_API_BASE_URL=${VITE_API_BASE_URL}
+      target: dev
     env_file:
       - .env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
     ports:
-      - "3000:80"
+      - "5173:5173"
     networks:
       - bootcamp_network
     logging:
@@ -69,7 +71,5 @@ services:
         max-size: "10m"
         max-file: 3
         compress: "true"
-    deploy:
-      replicas: 1
 networks:
   bootcamp_network:
