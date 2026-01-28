@@ -5,8 +5,8 @@
         class="flex justify-between items-center h-12 border-b border-neutral-300 pt-16 pb-12"
       >
         <router-link to="/" class="flex items-center">
-          <img src="/logo-text.png" alt="LiveFit+" class="h-6 w-auto" />
-          <span class="sr-only">LiveFit+</span>
+          <img src="/logo-text.png" alt="LiveFit" class="h-6 w-auto" />
+          <span class="sr-only">LiveFit</span>
         </router-link>
 
         <nav>
@@ -59,7 +59,7 @@
       <p
         class="text-center text-neutral-300 font-normal text-base leading-[150%] pt-4"
       >
-        © 2025 LiveFit+. All rights reserved.
+        © 2025 LiveFit. All rights reserved.
       </p>
     </div>
   </footer>
