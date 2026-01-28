@@ -75,8 +75,8 @@ npm start
 ### 4. 存取應用
 
 - **前端應用**: http://localhost:3000
-- **後端 API**: http://localhost:8080
-- **API 健康檢查**: http://localhost:8080/healthcheck
+- **後端 API**: http://localhost:8082
+- **API 健康檢查**: http://localhost:8082/healthcheck
 - **PostgreSQL**: localhost:5432
 
 ## 環境變數說明
@@ -94,7 +94,7 @@ POSTGRES_DB=test                     # 資料庫名稱
 ### 前端 API 連結設定
 
 ```bash
-VITE_API_BASE_URL=http://127.0.0.1:8080/api/  # 前端 API 基礎 URL
+VITE_API_BASE_URL=http://127.0.0.1:8082/api/  # 前端 API 基礎 URL
 ```
 
 ### API 伺服器設定
@@ -110,7 +110,7 @@ DB_SYNCHRONIZE=true                  # TypeORM 自動同步資料表結構（生
 DB_ENABLE_SSL=false                  # 是否啟用 SSL 連線
 
 # 伺服器設定
-PORT=8080                            # API 服務連接埠
+PORT=8082                           # API 服務連接埠
 LOG_LEVEL=debug                      # 日誌等級 (debug/info/warn/error)
 
 # JWT 認證設定
@@ -209,7 +209,7 @@ npm start
 
 # 4. 等待容器啟動完成（約 20-30 秒）
 # 前端: http://localhost:3000
-# 後端: http://localhost:8080
+# 後端: http://localhost:8082
 ```
 
 ### 情境 2: 開發時修改了程式碼
@@ -359,7 +359,7 @@ npm start
 ```bash
 # 檢查連接埠使用情況
 lsof -i :3000  # 前端
-lsof -i :8080  # 後端
+lsof -i :8082  # 後端
 lsof -i :5432  # 資料庫
 
 # 修改 .env 中的 PORT 設定
